@@ -1,40 +1,38 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title | capitalize }}</h1>
-        <small class="post-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ page.date | date: "%b %-d, %Y" }}
-            </time>
-            <span class="time">
-                | {{ page.content | number_of_words | divided_by:180 }} Minute Read
-            </span>
-        </small>
-        {%- include partial/meta-image.html content=page.content type='microdata' -%}
-    </header>
-    <div class="post-content" itemprop="articleBody">
-        {%- include partial/content/body.html content=page.content -%}
-    <div class="
-            hide" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                <meta itemprop="url" content="{{ '/assets/icons/512.png' | relative_url }}">
-                <meta itemprop="width" content="512">
-                <meta itemprop="height" content="512">
-            </div>
-            <meta itemprop="name" content="{{ site.title }}'s">
-    </div>
-    </div>
-    <footer class="post-footer">
-        {%- include partial/content/mini-bio.html -%}
-        <!-- Post Navigation -->
-        <div class="pagination">
-            {%- if page.previous.url -%}<a class="prev" href="{{ page.previous.url | prepend: site.baseurl }}">Previous
-                Post</a>{%- endif -%}
-            {%- if page.next.url -%}<a class="next" href="{{ page.next.url | prepend: site.baseurl }}">Next Post</a>
-            {%- endif -%}
-        </div>
-    </footer>
-</article>
-{%- include partial/disqus.html -%}
+
+<div id="post" class="container">
+
+	<div class="postthumb"><img src="/thumbnails/{{ page.thumbnail }}" /></div>
+
+	<h1>{{ page.title }}</h1>
+
+	<div class="meta clearfix">
+		<strong>Author:</strong> {{ page.author }}
+
+		{% if page.license %}
+			<br /><strong>License:</strong> {{ page.license }}
+		{% endif %}
+
+		<br /><br />
+		{% if page.homepage %}
+			<a class="btn" href="{{ page.homepage }}"><i class="icon-home"></i> Homepage</a>
+		{% endif %}
+		{% if page.download %}
+			<a class="btn" href="{{ page.download }}"><i class="icon-download-alt"></i> Download</a>
+		{% endif %}
+		{% if page.demo %}
+			<a class="btn" href="{{ page.demo }}"><i class="icon-road"></i> Demo</a>
+		{% endif %}
+		{% if page.license_link %}
+			<a class="btn" href="{{ page.license_link }}"><i class="icon-file"></i> License</a>
+		{% endif %}
+	</div>
+
+
+	<div class="post-content">
+	{{ content }}
+	</div>
+
+</div>
