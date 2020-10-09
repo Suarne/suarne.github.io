@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Example content
+title: Selected Publications
 description: >
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+  **Notes**: Joint first authors are indicated using # and corresponding authors are indicated using *.
 tags: [hyde]
-author: author2
-canonical_url: http://hyde.getpoole.com/2012/02/07/example-content/
+author: author1
+canonical_url: http://suarne.github.io/2012/02/07/example-content/
 ---
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
