@@ -1,123 +1,203 @@
-# Hydejack
-[![Gem Version](https://badge.fury.io/rb/jekyll-theme-hydejack.svg)](https://badge.fury.io/rb/jekyll-theme-hydejack)
+# Chirpy
 
-**Hydejack** is a Jekyll theme with JavaScript powers, combining the best of static sites and modern web apps.
-It features a suite of JavaScript that makes the page feel like an app, without sacrificing backwards-compatibility,
-page-load speed or SEO.
+🌏 English • [简体中文](docs/README_zh-CN.md)
 
-> Your presence on the web — A [blog], a [portfolio] and a [resume].
+[![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8220b926db514f13afc3f02b7f884f4b)](https://app.codacy.com/manual/cotes2020/jekyll-theme-chirpy?utm_source=github.com&utm_medium=referral&utm_content=cotes2020/jekyll-theme-chirpy&utm_campaign=Badge_Grade_Dashboard)
+[![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
+[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
 
-**Hydejack** aims to be the complete package for professionals on the web.
-It features a blog suitable for both prose and technical documentation,
-a showcase for your projects, and a resume that fits with the rest of the design.
+A minimal, sidebar, responsive web design Jekyll theme, focusing on text presentation, aim to help you easily record and share your knowledge. [Live Demo »](https://chirpy.cotes.info)
 
-![Screenshot](https://qwtel.com/assets/img/projects/default.jpg)
+[![Devices Mockup](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/devices-mockup.png)](https://chirpy.cotes.info)
 
-## Demo
-It's best to just [see it in action](https://qwtel.com/hydejack/).
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Credits](#credits)
+- [Support](#support)
+- [License](#license)
 
 ## Features
-Both versions include these features:
 
-* Full in-app page loading, powered by [hy-push-state]
-* A customizable sidebar that turns into a drawer menu on mobile, powered by [hy-drawer]
-* Advanced FLIP animations, inspired by Material Design
-* Good [Google PageSpeed Score][gpss][^3]
-* Higher *perceived speed* thanks to content pre-fetching
-* [Syntax highlighting][syntax], powered by [Rouge]
-* [LaTeX math blocks][latex], powered by [KaTeX]
-* Change the wording of built-in strings and possibly translate in other languages
-* Support for categories and tags
-* Built-in icons for many social networks
-* Simple and semantic HTML — can be viewed even with text-based browsers
-* Author section below each article and support for multiple authors
-* Progressive enhancement — sacrifice features, not content
-* Google Analytics and Google Fonts support
-* Disqus comments
-* Print layout — Used to render Hydejack's [PDF documentation][pdf]
-* Blog layout via `jekyll-paginate` (optional)
-* SEO meta tags via `jekyll-seo-tag` (optional)
-* Github avatars via `jekyll-avatar` (optional)
-* Gist support via `jekyll-gist` (optional)
+- Pinned Posts
+- Configurable theme mode
+- Double-level Categories
+- Last modified date for posts
+- Table of Contents
+- Automatically recommend related posts
+- Syntax highlighting
+- Mathematical expressions
+- Search
+- Atom Feeds
+- Disqus Comments
+- Google Analytics
+- GA Pageviews reporting (Advanced)
+- SEO and Performance Optimization
 
-## Documentation
-Hydejack is well documented. You can read the docs [on the Jekyll site][docs], or [on GitHub][wiki], or [download the PDF][pdf].
+## Installation
 
-## Download
-There are two versions of **Hydejack**: The *free version* includes basic blogging functionality,
-as did previous versions of the theme.
-The *PRO version* includes additional features for professionals:
-A [portfolio], a [resume] layout and a [welcome] page to feature your favorite projects and posts.
+[Fork **Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork) on GitHub, rename the repository to `USERNAME.github.io` (where `USERNAME` is your GitHub username), and then open terminal and clone the fork to local by:
 
-This table details what is and isn't included in each respective version.
+```terminal
+$ git clone https://github.com/USERNAME/USERNAME.github.io.git -b master --single-branch
+```
 
-|                                     | Free                                   | PRO                                          |
-|:------------------------------------|:--------------------------------------:|:--------------------------------------------:|
-| Blog                                | &#x2714;                               | &#x2714;                                     |
-| [Features][feat]                    | &#x2714;                               | &#x2714;                                     |
-| [Portfolio] Layout                  |                                        | &#x2714;                                     |
-| [Resume] Layout                     |                                        | &#x2714;                                     |
-| [Welcome] Layout                    |                                        | &#x2714;                                     |
-| [Newsletter Box][news]              |                                        | &#x2714;                                     |
-| [Custom Forms][forms]               |                                        | &#x2714;                                     |
-| No Hydejack Branding                |                                        | &#x2714;                                     |
-| License                             | [GPL-3.0][license]                     | [PRO]                                        |
-| Source                              | [GitHub][src]                          | Included                                     |
-| Support[^1]                         | No                                     | No                                           |
-| Price                               | Free                                   | $29                                          |
-|                                     | [**Download**][kit]                    | [**Buy Now - $29**][buy] [^2]                |
-{:.stretch-table}
+### Setting up the local envrionment
 
-[^1]: You MAY open an issue on GitHub, but no response and/or fix is guaranteed.
-      You understand that using Jekyll requires technical know-how, and is NOT comparable to Wordpress in terms of usability.
-      Please use the free version to confirm that Hydejack works for you.
-      For more, see the [PRO] license.
+If you would like to run or build the project on your local machine, please follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems` and `Bundler`. 
 
-[^2]: Transactions secured by [Stripe](https://stripe.com). Downloads handled by [Simple Goods](https://simplegoods.co/).  
+Before running or building for the first time, please complete the installation of the Jekyll plugins. Go to the root directory of project and run:
 
-[^3]: Actual page load speed depends on your hosting provider, resolution of embedded images and usage of 3rd party plugins.  
+```terminal
+$ bundle install
+```
 
-~~~
- __  __                __                                     __
-/\ \/\ \              /\ \             __                    /\ \
-\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
-  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
-   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
-    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
-                /\___/                \ \____/
-                \/__/                  \/___/
-~~~
+`bundle` will automatically install all the dependencies specified by `Gemfile`.
 
-[blog]: https://qwtel.com/hydejack/blog/
-[portfolio]: https://qwtel.com/hydejack/variations/
-[resume]: https://qwtel.com/hydejack/resume/
-[download]: https://qwtel.com/download/
-[welcome]: https://qwtel.com/hydejack/
-[forms]: https://qwtel.com/hydejack/forms-by-example/
+In order to generate some extra files (_categories_, _tags_ and _last modified list_), we need to use some tool scripts. And they require dependency package [yq](https://github.com/mikefarah/yq#install) to be installed. What's more, if your machine is running Debian or macOS, you also need to install [GNU coreutils](https://www.gnu.org/software/coreutils/).
 
-[feat]: https://qwtel.com/hydejack/#features
-[news]: https://qwtel.com/hydejack/#newsletter-subscription-box
-[syntax]: https://qwtel.com/hydejack/#syntax-highlighting
-[latex]: https://qwtel.com/hydejack/#latex-math-blocks
+- on Debian:
 
-[license]: LICENSE.md
-[pro]: licenses/PRO.md
-[docs]: docs/7.5.2/index.md
+  ```console
+  $ sudo apt-get install coreutils
+  ```
 
-[kit]: https://github.com/qwtel/hydejack-starter-kit/archive/v7.5.2.zip
-[src]: https://github.com/qwtel/hydejack
-[git]: https://github.com/qwtel/hydejack-starter-kit
-[gem]: https://rubygems.org/gems/jekyll-theme-hydejack
-[buy]: https://app.simplegoods.co/i/AQTTVBOE
+- on macOS:
 
-[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fqwtel.com%2Fhydejack%2F
-[wiki]: https://github.com/qwtel/hydejack/blob/master/docs/7.5.2/index.md
-[pdf]: https://github.com/qwtel/hydejack/releases/download/v7.5.2/Documentation._.Hydejack.pdf
-[hy-push-state]: https://qwtel.com/hy-push-state/
-[hy-drawer]: https://qwtel.com/hy-drawer/
-[rouge]: http://rouge.jneen.net
-[katex]: https://khan.github.io/KaTeX/
-[tinyletter]: https://tinyletter.com/
+  ```console
+  $ brew install coreutils
+  ```
 
-*[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
+### Setting up Docker environment (optional)
+
+If you're a loyal fan of [**Docker**](https://www.docker.com/) or just too lazy to install the packages mentioned in [_Setting up the local envrionment_](#setting-up-the-local-envrionment), please make sure you have **Docker Engine** installed and running, and then get Docker image `jekyll/jekyll` from Docker Hub by the following command:
+
+```console
+$ docker pull jekyll/jekyll:latest
+```
+
+## Usage
+
+Running [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/) requires some extra files, which cannot be generated by Jekyll native commands, so please strictly follow the methods mentioned below to run or deploy your website.
+
+### Initialization
+
+Go to the root directory of the project and start initialization:
+
+```console
+$ bash tools/init.sh
+```
+
+> **Note**: If you not intend to deploy it on GitHub Pages, append parameter option `--no-gh` at the end of the above command.
+
+What it does is:
+
+1. Remove some files or directories from your repository:
+
+    - `.travis.yml`
+    - files under `_posts`
+    - folder `docs`
+
+2. If you use the `--no-gh` option, the directory `.github` will be deleted. Otherwise, setup the GitHub Action workflow by removing extension `.hook` of `.github/workflows/pages-deploy.yml.hook`, and then remove the other files and directories in folder `.github`. 
+
+3. Automatically create a commit to save the changes.
+
+### Configuration
+
+Generally, go to `_config.yml` and configure the variables as needed. Some of them are typical options:
+
+- `url`
+- `avatar`
+- `timezone`
+- `theme_mode`
+
+### Run Locally
+
+You may want to preview the site contents before publishing, so just run it by:
+
+```terminal
+$ bash tools/run.sh
+```
+
+Then open a browser and visit to <http://localhost:4000>.
+
+Few days later, you may find that the file changes does not refresh in real time by using `run.sh`. Don't worry, the advanced option `-r` (or `--realtime`) will solve this problem, but it requires [**fswatch**](http://emcrisostomo.github.io/fswatch/) to be installed on your machine.
+
+### Run on Docker
+
+Run the site on Docker with the following command:
+
+```terminal
+$ docker run --rm -it \
+    --volume="$PWD:/srv/jekyll" \
+    -p 4000:4000 jekyll/jekyll \
+    bash tools/run.sh --docker
+```
+
+Please note that on Docker containers, you'll lose the real-time refresh feature.
+
+### Deployment
+
+Before the deployment begins, checkout the file `_config.yml` and make sure the `url` is configured correctly. Furthermore, if you prefer the [_project site_](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites) and don't use a custom domain, or you want to visit your website with a base url on a web server other than **GitHub Pages**, remember to change the `baseurl` to your project name that starting with a slash. For example, `/project`.
+
+Assuming you have already gone through the [initialization](#initialization), you can now choose ONE of the following methods to deploy your website.
+
+#### Deploy on GitHub Pages
+
+For security reasons, GitHub Pages build runs on `safe` mode, which restricts us from using tool scripts to generate additional page files. Therefore, we can use **GitHub Actions** to build the site, store the built site files on a new branch, and use that branch as the source of the Pages service.
+
+1. Push any commit to `origin/master` to trigger the GitHub Actions workflow. Once the build is complete and successful, a new remote branch named `gh-pages` will appear to store the built site files.
+
+2. Browse to your repository on GitHub and choose the branch `gh-pages` as the [publishing source](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) throught _Settings_ → _Options_ → _GitHub Pages_:
+    ![gh-pages-sources](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/gh-pages-sources.png)
+
+3. Visit your website at the address indicated by GitHub.
+
+#### Deploy on Other Platforms
+
+On platforms other than GitHub, we cannot enjoy the convenience of **GitHub Actions**. Therefore, we should build the site locally (or on some other 3rd-party CI platform) and then put the site files on the server.
+
+Go to the root of the source project, build your site by:
+
+```console
+$ bash tools/build.sh
+```
+
+> **Note**: The output path can be specified with the option `-d`.
+
+Or, build the site with Docker by:
+
+```terminal
+$ docker run --rm -it \
+    --volume="$PWD:/srv/jekyll" \
+    jekyll/jekyll \
+    bash tools/build.sh --docker
+```
+
+Unless you specified the output path, the generated site files will be placed in folder `_site` of the project's root directory. Now you should upload those files to your web server.
+
+### Documentation
+
+For more details and the better reading experience, please check out the [tutorials on demo site](https://chirpy.cotes.info/categories/tutorial/). In the meanwhile, a copy of the tutorial is also available on the [Wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+
+## Contributing
+
+The old saying, "Two heads are better than one." Consequently, welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
+
+## Credits
+
+This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files).
+
+:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas or inspired me to write more readable documentation.
+
+## Support
+
+If you enjoy this theme or find it helpful, please consider becoming my sponsor, I'd really appreciate it! Click the button <kbd>:heart: Sponsor</kbd> at the top of the [Home Page](https://github.com/cotes2020/jekyll-theme-chirpy) and choose a link that suits you to donate; this will encourage and help me better maintain the project.
+
+## License
+
+This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.

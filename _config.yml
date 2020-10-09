@@ -1,268 +1,202 @@
-# Config
-# ========================================================================================
+# The Site Settings
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT licensed
 
-# IMPORTANT: Set the URL of your site.
-# Set to https://<username>.github.io when hosting on GitHub Pages
-# (unless you are using a custom domain).
-url:                   https://suarne.github.io
 
-# IMPORTANT: Set The "base URL" of your site.
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+#--------------------------
+
+title: Chirpy                          # the main title
+
+tagline: A text-focused Jekyll theme.  # it will display as the sub-title
+
+description: >-                        # used by seo meta and the atom feed
+  A minimal, portfolio, sidebar,
+  bootstrap Jekyll theme with responsive web design
+  and focuses on text presentation.
+
+# Replace with the website url, e.g. 'https://username.github.io'
+url: 'protocol://domain'
+
+author: your_full_name                  # change to your full name
+
+avatar: /assets/img/sample/avatar.jpg   # support internet resources
+
+github:
+  username: github_username             # change to your github username
+
+twitter:
+  username: twitter_username            # change to your twitter username
+
+social:
+  name: your_full_name                  # it will shows as the copyright owner in Footer
+  email: example@doamin.com             # change to your email address
+  links:
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/username      # change to your twitter homepage
+    - https://github.com/username       # change to your github homepage
+    # Uncomment below to add more social links
+    # - https://www.facebook.com/username
+    # - https://www.linkedin.com/in/username
+
+google_site_verification: google_meta_tag_verification # change to your verification string
+
+#--------------------------
+
+
+# Only if your site type is GitHub Project sites and doesn't have a custom domain,
+# change below value to '/projectname'.
+baseurl: ''
+
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: Asia/Shanghai
+
+google_analytics:
+  id: ''          # Fill with your Google Analytics ID
+  pv:
+    # The Google Analytics pageviews switch.
+    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
+    enabled: false
+    # the next options only valid when `google_analytics.pv` is enabled.
+    proxy_url: ''
+    proxy_endpoint: ''
+    cache: false  # pv data local cache, good for the users from GFW area.
+
+disqus:
+  comments: false  # boolean type, the global switch for posts comments.
+  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
+
+# Prefer color scheme setting, available values:
 #
-# When hosting your site in a subdirectory of a server, set to /<name of directory>
-# (with leading /, but without the < >)
-# Use the empty string '' otherwise.
+#     dual   - Follow the system prefer color by default, and a toggle will display
+#              in the left bottom of Sidebar, which used for switch the theme between dark and light.
 #
-# When using GitHub Pages, set to '' when hosting a user- or organization page,
-# i.e. when the name of the repository looks like <username>.github.io.
-# Otherwise, set to /<name of repository> (with leading /, but without the < >).
-baseurl:               ''
+#     light  - Use the light color scheme
+#
+#     dark   - Use the dark color scheme
+#
+theme_mode: dual
 
-# Language of your content in 2-letter code, e.g.: en, de.
-# You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+# boolean type, global switch for ToC in posts.
+toc: true
 
-# The title of your blog. Used in the sidebar and the browser tab.
-title:                 Suarne
+paginate: 10
 
-# A short description (~150 chars) of the page used for the meta description tag.
-# Can use markdown, but no more than one paragraph (enforced by `>`)
-description:           >
-  Welcome! This is my home page. I will share my research work here.
+markdown: kramdown
 
-# A shorter description for the sidebar.
-tagline:               >
-  Hello! This is home page of Wan Shicheng, welcome!!!
-
-# A list of keywords for your blog
-keywords:              [research]
-
-# Used by jekyll-seo-tag...
-logo:                  /assets/icons/icon.png
-
-# This should be the same author as first entry in `_data/authors.yml`.
-# Duplication is necessary due to the `jekyll-feed`, `jekyll-seo-tag` plugin.
-author:
-  name:                Wan Shicheng
-  email:               scwan1998@gmail.com
-  # Used by `jekyll-seo-tag`:
-  # twitter:             <username>
-
-# This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2020. All rights reserved.
-
-# Add links to the footer.
-# Typically you'll want to link to your impress, cookies or privacy policy, etc.
-# legal:
-#   - title:             Impress
-#     href:              /impress/
-#   - title:             Cookies Policy
-#     href:              /cookies-policy/
-
-# Format of the permalinks
-permalink:             pretty
-
-# Pagination configuration (used by the `blog` layout)
-paginate:              5
-paginate_path:         /page-:num/
-
-
-# Customizaton
-# ========================================================================================
-
-# Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
-accent_color:          '#4fb1ba'
-
-# The string encoding which fonts to fetch from Google Fonts.
-# See: <https://qwtel.com/hydejack/docs/configuration/>
-google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
-
-# The text font. Expects a string that is a valid CSS font-family value.
-font:                  Noto Sans, Helvetica, Arial, sans-serif
-
-# The font used for headings. Expects a string that is a valid CSS font-family value.
-font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
-
-# 3rd Party Integrations
-# ----------------------------------------------------------------------------------------
-
-# Set your Google Analytics id to receive `pageview` events.
-# To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
-
-# Setting a disqus shortname will enable the comment section on
-# pages with `comments: true` in the front matter.
-# disqus:                <disqus_shortname>
-
-# Setting a tinyletter username will enable the newsletter subscription box.
-# tinyletter:            <tinyletter_username>
-
-# Hydejack Settings
-# ----------------------------------------------------------------------------------------
-# These settings are specific to Hydejack.
-
-hydejack:
-  # Configure the order of complementary content on blog posts
-  post_addons:         [about, newsletter, related]
-
-  # Configure the order of complementary content on project pages
-  project_addons:      [about, newsletter, other]
-
-  # If you do not use Google Fonts, set to `true`.
-  no_google_fonts:     false
-
-  # Set to `true` if you don't want to show an icon indicating external links
-  no_mark_external:    false
-
-  # Set to `true` if third party plugins fail to work with dynamically loaded pages
-  no_push_state:       false
-
-  # Set to `true` if you want to disable the drawer
-  no_drawer:           false
-
-  # Set to `true` if you do not want parts of the css inlined in <head/>
-  # This *may* be benefitial when serving the site over HTTP/2.
-  no_inline_css:       false
-
-  # Code blocks and tables "break" the layout by spanning the full available width.
-  # Set this to true if you want them to be the same width as other content.
-  no_break_layout:     false
-
-  # Set to `true` if you do not want to expose your resume and projects
-  # in machine-readable formats.
-  no_structured_data:  false
-
-  # You can set this to `true` if you don't want to set the `theme-color` meta tag,
-  # This only affects the meta tag, not the color specified in the app manifest.
-  no_theme_color:      false
-
-  # Set to `true` when building with the `--lsi` option
-  use_lsi:             false
-
-  # When using Google Analytics, set to `true` to display a cookie notice banner.
-  # When enabled, no user-related data will be stored until the user gives consent.
-  cookies_banner:      false
-
-
-# Collections
-# ========================================================================================
-
-collections:
-  featured_categories:
-    permalink:         /category/:name/
-    output:            true
-
-  featured_tags:
-    permalink:         /tag/:name/
-    output:            true
-
-  projects:
-    permalink:         /projects/:path/
-    output:            true
-
-
-# File inclusion/exclusion
-# ========================================================================================
-
-exclude:
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - package.json
-  - package-lock.json
-include:
-  - LICENSE.md
-
-
-# Plugins and Plugin Configuration
-# ========================================================================================
-
-plugins:
-  # - jekyll-avatar
-  # - jekyll-default-layout
-  - jekyll-feed
-  # - jekyll-gist
-  # - jekyll-optional-front-matter
-  - jekyll-paginate
-  # - jekyll-readme-index
-  # - jekyll-redirect-from
-  - jekyll-relative-links
-  # - jekyll-remote-theme
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  # - jekyll-titles-from-headings
-
-# Theme
-# ---------------------------------------------------------------------------------------
-
-# theme: jekyll-theme-hydejack
-# remote_theme: qwtel/hydejack@gem
-
-# SEO Tag
-# ---------------------------------------------------------------------------------------
-
-# Where you proof that you own this site (used by jekyll-seo-tag)
-# google_site_verification: <verification-id>
-# -- or --
-# webmaster_verifications:
-#   google:              <verification-id>
-#   bing:                <verification-id>
-#   alexa:               <verification-id>
-#   yandex:              <verification-id>
-
-# Used for Twitter cards
-# twitter:
-#   username:            <shortname>
-
-# Used for Facebook open graph
-# facebook:
-#   app_id:              <id>
-#   publisher:           <id>
-#   admins:              <id>
-
-# Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
-
-
-# Other Plugins
-# ---------------------------------------------------------------------------------------
-
-optional_front_matter:
-  remove_originals:    true
-
-readme_index:
-  remove_originals:    true
-
-relative_links:
-  collections:         true
-
-titles_from_headings:
-  strip_title:         true
-  collections:         true
+highlighter: rouge
 
 kramdown:
-  footnote_backlink:   '&#x21a9;&#xfe0e;'
-  math_engine:         mathjax
-  math_engine_opts:
-    preview:           true
-    preview_as_code:   true
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-compress_html:
-  comments:            ["<!-- ", " -->"]
-  clippings:           all
-  endings:             all
-  ignore:
-    envs:              [development]
+# DO NOT change this unless you're a Pro user on Jekyll and Web development,
+# or you think you're smart enough to change other relevant URLs within this template.
+permalink: /posts/:title/
+
+defaults:
+  -
+    scope:
+      path: ""          # An empty string here means all files in the project
+      type: posts
+    values:
+      layout: post
+      comments: true    # Enable comments in posts.
+      toc: true         # Display TOC column in posts.
+      location: Post
+      breadcrumb:
+        -
+          label: Posts
+          url: /
+  -
+    scope:
+      path: _drafts
+    values:
+      comments: false
+  -
+    scope:
+      path: tags
+    values:
+      tab_active: Tags
+      location: Tag
+      breadcrumb:
+        -
+          label: Home
+          url: /
+        -
+          label: Tags
+          url: /tabs/tags/
+  -
+    scope:
+      path: categories
+    values:
+      tab_active: Categories
+      location: Category
+      breadcrumb:
+        -
+          label: Home
+          url: /
+        -
+          label: Categories
+          url: /tabs/categories/
+  -
+    scope:
+      path: tabs
+    values:
+      layout: page
+      dynamic_title: true    # Hide title in mobile screens.
+      breadcrumb:
+        -
+          label: Home
+          url: /
+
 
 sass:
-  style:               compressed
+  sass_dir: /assets/css
+  style: compressed
 
-# If you are upgrading form v5 (or earlier), uncomment the lines below,
-# so that the location of the feed XML stays the same.
-# feed:
-#   path:                atom.xml
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: [html, head, body, dt, dd, rt, rp,
+            optgroup, option, colgroup, caption,
+            thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+exclude:
+  - vendor        # Avoid Jekyll mistakenly read the vendor directory on Travis-CI's VM .
+  - Gemfile.lock
+  - Gemfile
+  - tools
+  - docs
+  - README.md
+  - LICENSE
+
+sitemap_exclude:  # Sitemap will exclude the following items.
+  fuzzy:
+    - /assets/
+  accurate:
+    - /norobots/
+    - /tabs/
+    - /categories/
+    - /tags/
+    - /posts/
+    - 404.html
+    - feed.xml
+    - sitemap.xml
+    - robots.txt
+    - redirects.json
