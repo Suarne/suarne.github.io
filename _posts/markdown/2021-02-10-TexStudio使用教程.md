@@ -229,7 +229,14 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 补充：
 
-+ 插入跨栏表格只需要把 “\begin{table} 内容 \end{table} ”改成 “\begin{table\*} 内容 \end{table\*}”
++ 插入跨栏表格只需要在table属性后面加上星号
+
+  ```latex
+  % 注意这里是“table*”而不是“table”
+  \begin{table*}
+    ...
+  \end{table*}
+  ```
 
 + 当表格在文中显示过大或过小，可以添加
 
@@ -269,7 +276,14 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 补充：
 
-+ 插入跨栏图片只需要把 “\begin{figure} ... \end{figure}” 改成 “\begin{figure\*} ... \end{figure\*}”
++ 插入跨栏图片只需要在figure属性后面加上星号
+
+  ```latex
+  % 注意这里是“figure*”而不是“figure”
+  \begin{figure*}
+    ...
+  \end{figure*}
+  ```
 
 + 通常我们写论文插入图片的格式为“eps，pdf，jpg”，这些格式都可以通过matelab编译之后把图片另存为就可以得到
 
@@ -365,7 +379,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 效果图如下（该图引用自网友[ihoujie](https://blog.csdn.net/u014791046/article/details/51383698?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-6.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-6.nonecase)）：
 
-<img src="http://images.cnblogs.com/cnblogs_com/piags/201211/201211062021275586.jpg" alt="编写算法模板示意图" style="zoom:80%;" />
+![伪代码示意图](/assets/img/handbook/TexStudio使用教程/伪代码示意图.png)
 
 ### 其它
 
