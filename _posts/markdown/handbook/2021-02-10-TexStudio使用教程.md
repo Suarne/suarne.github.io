@@ -407,7 +407,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 更多例子可以[点这里](https://www.cnblogs.com/tsingke/p/6510343.html)。
 
-要善于使用TexStudio的==**拼写和语法检查**==，有错误的地方只要右键一下就能自动更正。这里是[网友整理的教程](https://blog.csdn.net/yinqingwang/article/details/54583541)，也可以根据需要自行配置。【我在使用的时候候下载的软件版本不大对，高亮功能有问题，且没有找到修复办法，这里贴一份正规下载[网址](https://sourceforge.net/projects/texstudio/)（原TexStudio官网需要架梯子）】
+要善于使用TexStudio的**拼写和语法检查**，有错误的地方只要右键一下就能自动更正。这里是[网友整理的教程](https://blog.csdn.net/yinqingwang/article/details/54583541)，也可以根据需要自行配置。【我在使用的时候候下载的软件版本不大对，高亮功能有问题，且没有找到修复办法，这里贴一份正规下载[网址](https://sourceforge.net/projects/texstudio/)（原TexStudio官网需要架梯子）】
 
 # 引用文献：
 
