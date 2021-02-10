@@ -229,7 +229,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 补充：
 
-+ 插入跨栏表格只需要把 `\begin{table} ... \end{table}` 改成 `\begin{table\*} ... \end{table\*}`
++ 插入跨栏表格只需要把 “\begin{table} 内容 \end{table} ”改成 “\begin{table\*} 内容 \end{table\*}”
 
 + 当表格在文中显示过大或过小，可以添加
 
@@ -269,7 +269,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 补充：
 
-+ 插入跨栏图片只需要把 `\begin{figure} ... \end{figure}` 改成 `\begin{figure\*} ... \end{figure\*}`
++ 插入跨栏图片只需要把 “\begin{figure} ... \end{figure}” 改成 “\begin{figure\*} ... \end{figure\*}”
 
 + 通常我们写论文插入图片的格式为“eps，pdf，jpg”，这些格式都可以通过matelab编译之后把图片另存为就可以得到
 
@@ -438,7 +438,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 > 5. Liam Huang：[一份其实很短的 LaTeX 入门文档](https://liam.page/2014/09/08/latex-introduction/)
 > 6. 无宠不惊过一生：[LATEX中常用的插图和插表格的方法](https://blog.csdn.net/weixin_43330946/article/details/88255366?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase)
 > 7. 刘海洋：《LaTex入门》
-> 8. LaTex社区：http://www.latexstudio.net/
+> 8. LaTex社区：[社区首页](http://www.latexstudio.net/)
 > 9. hzYang ：[【开源项目】LaTeX速查手册](https://zhuanlan.zhihu.com/p/88249368)
 > 10. MOON：[LaTex手册](https://www.moonpapers.com/manual/latex/)
 
