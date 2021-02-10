@@ -7,11 +7,9 @@ tags: [latex]
 math: true
 ---
 
-# TexStudio使用教程
-
 写在前面：因为自己需要使用TexStudio，所以收集相关方面的教程。**所有的记录都来自互联网**，在参考部分均给出链接。安装教程[在这里](https://blog.csdn.net/aijava1/article/details/99282235)（单推使用CTEX+TexStudio模式，毕竟其他科目要写中文论文的时候这个也可以弄）LaTeX是所想即所得，Word是所见即所得。所以你要告诉Latex你要做什么，然后它才会去处理你给出的命令。
 
-## 通常框架：
+# 通常框架：
 
 ```latex
 % 导言区
@@ -90,8 +88,7 @@ math: true
 
 + 
 
-
-## 摘要：
+# 摘要：
 
 ```latex
 \begin{abstract} % 摘要开始
@@ -101,7 +98,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 \end{abstract} % 摘要结束
 ```
 
-## 公式：
+# 公式：
 
 ```latex
 \begin{equation} % “equation”表示会对插入公式进行自动编号
@@ -128,9 +125,9 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 
 
-## 表格：
+# 表格：
 
-### 三线表格
+## 三线表格
 
 ```latex
 \usepackage{booktabs} % 插入表格时需要调用的包
@@ -154,7 +151,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 \end{table}
 ```
 
-### 合并多行的表格
+## 合并多行的表格
 
 ```latex
 \begin{table}
@@ -181,7 +178,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 + 合并多列只要将表达式 `\multirow` 改成 `\multicolumn` 即可
 
-### 可以分行的表格
+## 可以分行的表格
 
 ```latex
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}  
@@ -205,7 +202,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 ![可以分行的表格](https://img-blog.csdnimg.cn/20190306211646356.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzMzMDk0Ng==,size_16,color_FFFFFF,t_70)
 
-### 带有斜线的表格
+## 带有斜线的表格
 
 ```latex
 
@@ -258,7 +255,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 + 
 
-## 图片：
+# 图片：
 
 ```latex
 \usepackage{graphicx} % 插入图片时需要调用的包
@@ -314,9 +311,9 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 + 在这里贴出一个链接，是在latex中插图和颜色的[使用指导](http://tex.loria.fr/graph-pack/grf/grf.pdf)。
 
-## 算法：
+# 算法：
 
-### 通常框架
+## 通常框架
 
 ```latex
 % 这其中algorithm是浮动块，目的是让Latex能像处理图片表格那样处理伪代码块，（必须要有）
@@ -381,7 +378,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 ![伪代码示意图](/assets/img/handbook/TexStudio使用教程/伪代码示意图.png)
 
-### 其它
+# 其它：
 
 ```Latex
 % 其实宏包algorithmicx和宏包algorithmic是一样的效果，只是一个关键字仅首字母大写，一个全为大写，这一点需要注意
@@ -412,7 +409,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 要善于使用TexStudio的==**拼写和语法检查**==，有错误的地方只要右键一下就能自动更正。这里是[网友整理的教程](https://blog.csdn.net/yinqingwang/article/details/54583541)，也可以根据需要自行配置。【我在使用的时候候下载的软件版本不大对，高亮功能有问题，且没有找到修复办法，这里贴一份正规下载[网址](https://sourceforge.net/projects/texstudio/)（原TexStudio官网需要架梯子）】
 
-## 引用文献：
+# 引用文献：
 
 推荐使用后缀bib文件管理引用文献
 
