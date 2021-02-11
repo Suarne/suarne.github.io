@@ -13,9 +13,7 @@ title: Suarne                          # the main title
 tagline: This is home page of Wan Shicheng  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  Record the way of becoming a qualified scholar
 
 # Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://suarne.github.io'
