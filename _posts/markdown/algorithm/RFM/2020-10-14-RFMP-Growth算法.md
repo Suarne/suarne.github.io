@@ -17,7 +17,7 @@ math: true
 ## 定义
 
 + 交易项集 $T = \lbrace t_{\rm i}, (x_1, q_{\rm x_1}), \dots, (x_{\rm m}, q_{\rm x_m}\rbrace$，其中 $t$ 表示该交易项集发生的时间，$x$ 表示项（商品），$q_{\rm x_j}$ 表示内部效用（商品购买量）
-+ 频繁度分值（**Frequency score**）：相当于以前的支持度 $sup(X)$，该文中使用 $FScore_{DB}(X)$ 表示。不同的是，该支持度必须符合 $FScore(X) \ge |DB| \times \alpha$ 才能把该项集 $X$ 当作是 $F$-$pattern$（其中 $\alpha$ 是阈值，$|DB|$ 表示数据集中包含的总交易项数量）
++ 频繁度分值（**Frequency score**）：相当于以前的支持度 $sup(X)$，该文中使用 $FScore_{DB}(X)$ 表示。不同的是，该支持度必须符合 $FScore(X) \ge \mid DB\mid \times \alpha$ 才能把该项集 $X$ 当作是 $F$-$pattern$（其中 $\alpha$ 是阈值，$\mid DB\mid$ 表示数据集中包含的总交易项数量）
 + 利润分值（**Monetary score**）：相当于以前的效用值 $u(X)$，该文中使用 $MScore(X, T_{\rm j})$ 表示在交易项 $T_{\rm j}$ 中该项集 $X$ 的利润分值，定义式为 $MScore(X, T_{\rm j}) = \sum_{\rm x_i \in X \land X \subseteq T_{\rm j}}p(x_{\rm i}) \times q_{\rm x_i}$。更进一步，项集 $X$ 在整个数据集中的利润分值定义为 $MScore(X) = \sum_{T_{\rm j} \in DB}$。当 $MScore(X) \ge \beta$ 时，我们认定该项集是 $M$-$pattern$（其中 $\beta$ 是设置的阈值）
 + 近期分值（**Recency score**）：在交易项集 $T_{\rm j}$ 内，项集 $X$ 存在，定义为 $RScore(X, T_{\rm j}) = (1-\delta)^{time_{\rm current}-time_{\rm T_j}}$(其中 $\delta \in (0, 1)$ 是设定的衰减速度)，更进一步，项集 $X$ 在整个数据集中的近期分值定义为 $RScore(X) = \sum_{T_{\rm j} \in DB}RScore(X, T_{\rm j})$。当 $RScore(X) \ge \gamma$ 时，我们认定该项集是 $R$-$pattern$ （其中 $\gamma$ 是设定的阈值）
 
@@ -25,7 +25,7 @@ _Ps. 当某个项集 $X$ 满足以上三个度量分值都不小于各自设定�
 
 + 项集的交易项效用值（**Transaction utility**）类似于以前的 $tu(X, T_{\rm j})$，该文中定义为 $ta(X, T_{\rm j}) = \sum_{x_{\rm i} \in T_{\rm j} \land X \subseteq T_{\rm j}}p(x_{\rm i}) \times q_{\rm x_i}$，更进一步，项集 $X$ 在整个数据集中的总交易项效用值定义为 $tta_{\rm DB}(X) = \sum_{T_{\rm j}}ta(A, T_{\rm j})$
 
-*Ps. 当某个项集 $X$ 满足 $FScore(X) \ge |DB| \times \alpha$，$tta_{\rm DB}(X) \ge \beta$，$RScore_{\rm DB}(X) \ge \gamma$，那么我们认定该项集是 $RFT$-$pattern$ （类似于使用 **TWU** 筛选出候选项集，即需要进一步确认的项集）*
+*Ps. 当某个项集 $X$ 满足 $FScore(X) \ge \mid DB\mid \times \alpha$，$tta_{\rm DB}(X) \ge \beta$，$RScore_{\rm DB}(X) \ge \gamma$，那么我们认定该项集是 $RFT$-$pattern$ （类似于使用 **TWU** 筛选出候选项集，即需要进一步确认的项集）*
 
 + **RFM-pattern-tree**：在 [$FP$-$Tree$](https://juejin.im/post/6883290309980061704) 上进行改造，结构如下图所示：
 
@@ -88,7 +88,7 @@ _Ps. 当某个项集 $X$ 满足以上三个度量分值都不小于各自设定�
 
 ![algo_RFM-pattern-tree](/assets/img/algorithm/RFMP-Growth算法/algo_RFM-pattern-tree.png)
 
-以下演示继续计算，遍历交易项 $T_1$ 时，可以得到 $RScore_{\rm DB}(T_1) \approx 0.315, \, FScore_{\rm DB}(T_1) = 1, \, tta_{\rm DB}(T_1) = 312$，分别创建三个子节点：insert_node([A|FB], root, 0.315, 312)，insert_node([F|B], A, 0.315, 312)，和 insert_node([B|- null], B, 0.315, 312) 排序后如下图(左)所示（_Ps. 文中特别强调了在创建节点后需要立即建立相应的索引_）；遍历交易项 $T_2$ 时，可以得到 $RScore_{\rm DB}(T_2) \approx 0.377, \, FScore_{\rm DB}(T_2) = 1, \, tta_{\rm DB}(T_2) = 164$，由于节点已经存在，所以直接相加重新赋值，下图(中)所示；遍历交易项 $T_3$ 时，可以得到 $RScore_{\rm DB}(T_3) \approx 0.393, \, FScore_{\rm DB}(T_3) = 1, \, tta_{\rm DB}(T_3) = 45$，因为节点 $C$ 在 $A$ 后面，所以新开一条分支，如下图(右)所示：
+以下继续演示计算，遍历交易项 $T_1$ 时，可以得到 $RScore_{\rm DB}(T_1) \approx 0.315, \, FScore_{\rm DB}(T_1) = 1, \, tta_{\rm DB}(T_1) = 312$，分别创建三个子节点: $insert\_node([A \mid FB], root, 0.315, 312)$，$insert\_node([F \mid B], A, 0.315, 312)$，和 $insert\_node([B \mid - null], B, 0.315, 312)$ 排序后如下图(左)所示（_Ps. 文中特别强调了在创建节点后需要立即建立相应的索引_）；遍历交易项 $T_2$ 时，可以得到 $RScore_{\rm DB}(T_2) \approx 0.377, \, FScore_{\rm DB}(T_2) = 1, \, tta_{\rm DB}(T_2) = 164$，由于节点已经存在，所以直接相加重新赋值，下图(中)所示；遍历交易项 $T_3$ 时，可以得到 $RScore_{\rm DB}(T_3) \approx 0.393, \, FScore_{\rm DB}(T_3) = 1, \, tta_{\rm DB}(T_3) = 45$，因为节点 $C$ 在 $A$ 后面，所以新开一条分支，如下图(右)所示：
 
   <center calss="half">
       <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/788a8831e085441c9e0c4d7a89794827~tplv-k3u1fbpfcp-watermark.image" width=100 alt="insert T1 into RFM-pattern-tree"/>
