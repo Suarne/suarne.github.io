@@ -319,6 +319,14 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 # 算法：
 
+需要注意，有时候会出现声明冲突/重复（如“Command XXXX already defined.”）等报错信息，如下图：
+
+![重复声明错误信息](/assets/img/handbook/TexStudio使用教程/重复声明错误.png)
+
+需要查看自己使用的格式文件(“.sty”或“.cls”后缀)中是否已经有了相关声明，看个人需求选择注释掉哪一条
+
+![格式声明文件](/assets/img/handbook/TexStudio使用教程/格式声明文件.png)
+
 ## 通常框架
 
 ```latex
@@ -384,7 +392,7 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 ![伪代码示意图](/assets/img/handbook/TexStudio使用教程/伪代码示意图.png)
 
-### 带竖线的伪代码
+## 带竖线的伪代码
 
 需要明确的是，在该伪代码框架里，通过插入空行表示开始新的一行，每一句最后需要添加 “\;” 以表示结束
 
