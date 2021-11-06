@@ -384,6 +384,46 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 
 ![伪代码示意图](/assets/img/handbook/TexStudio使用教程/伪代码示意图.png)
 
+### 带竖线的伪代码
+
+需要明确的是，在该伪代码框架里，通过插入空行表示开始新的一行，每一句最后需要添加 “\;” 以表示结束
+
+```latex
+\usepackage[noend]{algpseudocode}
+% \usepackage{algorithm} 必须注释
+% \usepackage{algorithmic} 必须注释
+\usepackage[ruled,linesnumbered]{algorithm2e}
+
+\begin{algorithm}[H]
+	\SetAlgoLined
+	\KwData{this text}
+	\KwResult{how to write algorithm with \LaTeX2e }
+	
+	initialization\;
+	
+	\While{not at end of this document}{
+		
+		read current\;
+		
+		\If{understand}{
+			\eIf{none}{
+			}{
+				go back to the beginning of current section\;
+			}
+		
+			go to next section\;
+			
+			current section becomes this one\;
+		}
+	}
+	\caption{How to write algorithms}
+\end{algorithm}
+```
+
+效果图如下：
+
+![带竖线的伪代码](/assets/img/handbook/TexStudio使用教程/带竖线的伪代码.png)
+
 # 其它：
 
 ```Latex
