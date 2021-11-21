@@ -1,8 +1,8 @@
 ---
-title: MD-LLBorder算法
+title: MDB-LLBorder算法
 date: 2021-11-20 23:07:52 +0800
-categories: [Notes, Itemset pattern Mining, General]
-tags: [utility, emerging itemset]
+categories: [Notes, emerging pattern Mining]
+tags: [emerging itemset]
 math: true
 ---
 
@@ -65,4 +65,4 @@ math: true
 
 # 总结
 
-在效用挖掘领域的论文中经常可以看到引用这篇文章，主要贡献点在于解释了枚举树为什么可以用来进行空间检索，为什么剪枝策略可以在枚举树上运行而不会导致结果有遗漏；本文使用到了大量的数学公式和证明过程，举的例子也是非常的多，跟着全文耐心推导一遍能够加深理解
+该论文是上个世纪发表的文章，但清晰地解释了何为 emerging pattern 以及为什么要挖掘这种对象；全文用到了大量的数学公式和证明过程，可以说是进入该领域内需要掌握的一篇基础论文。该论文主要是为了构造分类器提出新的算法，而在效用领域是否也可以使用这个概念呢？还需要更多研究，从检索结果来看并没有很多学者在推进这方面的研究，可以先看看他们的工作成果，尝试着结合项集效用挖掘
