@@ -116,14 +116,44 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
 %在引言区（头部）可以先做如下定义，对parameter进行自我定制
 \newtheorem{definition}{\bf\it Definition \quad}[section] % 第一个{}中写parameter，第二个{}是显示的样式，第三个[]表示编号，section意味着会按照每章节自动编号，默认是全文连续编号
 \usepackage{amsthm} % 如果要使用proof语句就必须要引入这个包
-\newtheorem*{parameter}{parameter} % 表示不编号
+\newtheorem*{parameter}{parameter} % 带星号表示不编号
 
 \begin{parameter} % parameter可以为：definition/theorem/property/lemma/proof/rationale
 	内容...
 \end{parameter}
 ```
 
++ 对于多行公式
 
+  通过 `&`  来保证等号或者其它符号对其
+
+  ```latex
+  \begin{align}
+  
+    x+1 &= y+2 \\
+  
+    &\le z+3 \\
+  
+    &< w+4
+  
+  \end{align}
+  ```
+
+  $$
+  \begin{align}
+  
+    x+1 &= y+2 \\
+  
+    &\le z+3 \\
+  
+    &< w+4
+  
+  \end{align}
+  $$
+
+  
+
++ 
 
 # 表格：
 
