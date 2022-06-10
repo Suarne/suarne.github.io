@@ -150,10 +150,34 @@ Your abstract.\\ % “\\”放在段尾，表示另起一行的意思
   
   \end{align}
   $$
-
   
++ 对于markdown中的多行公式对齐
 
-+ 
+  ```latex
+  $$
+  \begin{array}{l} % 实现左对齐
+    u(X^\prime, T_q) = u(X, T_1) + u(X^\prime-X, T_q) \\ % 或者首行公式尾添加 \hspace{100cm}\\
+    = u(X, T_q) + u(X^\prime / X, T_q) \\
+    = u(X, T_q) + \sum_{i_j \in X^\prime / X}u(i_j, T_q) \\
+    \le u(X, T_q) + \sum_{i_j \in T_q / X}u(i_j, T_q) \\
+    = u(X, T_q) + rutil(X, T_q). \\
+  \end{array}
+  $$
+  ```
+  $$
+  \begin{array}{l}
+    u(X^\prime, T_q) = u(X, T_1) + u(X^\prime-X, T_q) \\
+    = u(X, T_q) + u(X^\prime / X, T_q) \\
+    = u(X, T_q) + \sum_{i_j \in X^\prime / X}u(i_j, T_q) \\
+    \le u(X, T_q) + \sum_{i_j \in T_q / X}u(i_j, T_q) \\
+    = u(X, T_q) + rutil(X, T_q). \\
+  \end{array}
+  $$
+
++
+
+
+
 
 # 表格：
 
